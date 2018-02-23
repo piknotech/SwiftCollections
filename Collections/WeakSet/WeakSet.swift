@@ -4,23 +4,21 @@
 
 import Foundation
 
-/// WeakSet holding weak references onto its elements.
-/// Conforms to Sequence to make iterating possible.
-/// Doesn't conform to Collection since accessing indices e. g. doesn't make sense when nil-values may get filtered out.
-struct WeakSet<Element>: CustomStringConvertible, ExpressibleByArrayLiteral, Sequence where Element: AnyObject, Element: Hashable {
+struct WeakSet<Element>: CustomStringConvertible, ExpressibleByArrayLiteral where Element: AnyObject, Element: Hashable {
     // MARK: - Properties
     var isEmpty: Bool {
-        return contentValues.isEmpty
+        return contents.isEmpty
     }
 
     var description: String {
-        return "\(contentValues.count) Item(s): \(String(describing: contentValues))"
+        return "\(contents.count) Item(s): \(String(describing: contents))"
     }
 
-    private var contents = Set<Weak<Element>>()
-    private var contentValues: Set<Element> {
-        return Set(contents.flatMap { $0.value })
+    var contents: Set<Element> {
+        return Set(wrappedContents.flatMap { $0.value })
     }
+
+    private var wrappedContents = Set<Weak<Element>>()
 
     // MARK: - Initializers
     init() { }
@@ -36,21 +34,17 @@ struct WeakSet<Element>: CustomStringConvertible, ExpressibleByArrayLiteral, Seq
     }
 
     // MARK: - Methods
-    func makeIterator() -> AnyIterator<Element> {
-        return AnyIterator(contents.map { $0.value }.flatMap { $0 }.makeIterator())
-    }
-
     mutating func insert(_ item: Element) {
         clean()
-        contents.insert(Weak<Element>(item))
+        wrappedContents.insert(Weak<Element>(item))
     }
 
     mutating func remove(_ item: Element) {
         clean()
-        contents.remove(Weak<Element>(item))
+        wrappedContents.remove(Weak<Element>(item))
     }
 
     mutating func clean() {
-        contents = contents.filter { $0.value != nil }
+        wrappedContents = wrappedContents.filter { $0.value != nil }
     }
 }

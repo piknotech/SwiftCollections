@@ -2,7 +2,7 @@
 
 ## Functionality
 
-A weak array is an array holding weak references onto its elements. It is e. g. useful for delegation patterns, where you would want to add listeners to an array but don't want the array to keep references when nothing else references the items anymore.
+A `WeakArray` is an array holding weak references onto its elements. It is e. g. useful for delegation patterns, where you would want to add listeners to an array but don't want the array to keep references when nothing else references the items anymore. Its implementatipn is very similar to `WeakSet`.
 
 ## Implementation
 
@@ -10,7 +10,7 @@ A `WeakArray` is a collection with AnyObject as its contained element. It confor
 - `CustomStringConvertible`,
 - `ExpressibleByArrayLiteral`,
 
-It doesn't conform to `Sequence` and `Collection`. Internally `WeakArray` stores an array of `Weak<Element>` objects, but only regards those objects, whose contained value is not nil. The output of the array might change all of a sudden (as soon as the reference count of the contained value equals 0), therefore, working with indices (`Collection` protocol) or iterating (`Sequence` protocol) doesn't make sense. However, once the variable `contents` is accessed, an array of the currently non-nil contained item is returned which enables use of `Collection` & `Sequence`.
+It doesn't conform to `Sequence` and `Collection`. Internally `WeakArray` stores an array of `Weak<Element>` objects, but only regards those objects, whose contained value is not nil. The value of the weak array might change all of a sudden (as soon as the reference count of any contained value equals 0), therefore, working with indices (`Collection` protocol) or iterating (`Sequence` protocol) doesn't make sense. However, once the variable `contents` is accessed, an array of the currently non-nil contained item is returned which enables use of `Collection` & `Sequence`.
 
 Apart from everything implemented by the protocols, `WeakArray` offers:
 - methods to add members, remove members and clean out `Weak<Element>` instances internally stored, but with out a non-nil contained value.
@@ -18,7 +18,7 @@ Apart from everything implemented by the protocols, `WeakArray` offers:
 
 ## Use
 
-You can create a WeakArray using an array literal:
+You can create a `WeakArray` using an array literal:
 
 ```
 var weakArray: WeakArray<UIView> = [UIView(), UIView()]
