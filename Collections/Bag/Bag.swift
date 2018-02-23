@@ -4,6 +4,12 @@
 
 import Foundation
 
+// MARK: - Subtypes
+enum RemovalType {
+    case any(Int)
+    case all
+}
+
 struct Bag<ContainedElement: Hashable> {
     // MARK: - Properties
     var uniqueCount: Int {
@@ -66,16 +72,26 @@ struct Bag<ContainedElement: Hashable> {
         }
     }
 
-    /// Removes occurences times the specific member.
-    mutating func remove(_ member: ContainedElement, occurrences: Int = 1) {
-        precondition(occurrences > 0, "Can only remove a positive number of occurrences")
-        
-        let currentCount = contents[member] ?? 0
-        contents[member] = currentCount - occurrences
-    }
-    
-    mutating func removeAll(_ member: ContainedElement) {
-        contents.removeValue(forKey: member)
+    /// Removes occurrences times the specific member, or remove all occurrences.
+    /// The number of occurrences must be positive and must not be greater than the current count of the specified element.
+    mutating func remove(_ removalType: RemovalType, of element: ContainedElement) {
+        switch removalType {
+        case .any(let count):
+            precondition(occurrences > 0, "Can only remove a positive number of occurrences")
+            
+            let currentCount = contents[member] ?? 0
+            precondition(occurrences <= currentCount, "Can only remove as much occurrences as the element exists in the collection")
+            
+            // Remove or update element
+            if currentCount == occurrences {
+                contents.removeValue(forKey: member)
+            } else {
+                contents[member] = currentCount - occurrences
+            }
+            
+        case .all:
+            contents.removeValue(forKey: member)
+        }
     }
 }
 
