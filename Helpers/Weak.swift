@@ -2,7 +2,7 @@
 //  Weak.swift
 //
 
-import UIKit
+import Foundation
 
 /// Weak wrapper for generic AnyObject.
 class Weak<T>: Hashable where T: AnyObject {

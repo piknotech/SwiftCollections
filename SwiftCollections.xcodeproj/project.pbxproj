@@ -1,0 +1,130 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXFileReference section */
+		CC6DE94820405E71009C0BD2 /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
+		CC6DE94920405E71009C0BD2 /* WeakArrayDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakArrayDoc.md; sourceTree = "<group>"; };
+		CC6DE94B20405E71009C0BD2 /* WeakSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSet.swift; sourceTree = "<group>"; };
+		CC6DE94C20405E71009C0BD2 /* WeakSetDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakSetDoc.md; sourceTree = "<group>"; };
+		CC6DE94E20405E71009C0BD2 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		CC6DE94F20405E71009C0BD2 /* BagDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BagDoc.md; sourceTree = "<group>"; };
+		CC6DE95020405E71009C0BD2 /* DocTemplate.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DocTemplate.md; sourceTree = "<group>"; };
+		CC6DE95120405E71009C0BD2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CC6DE95320405E71009C0BD2 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		CC6DE95420405E71009C0BD2 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		CC61CADA20405E3A004C6814 = {
+			isa = PBXGroup;
+			children = (
+				CC6DE94620405E71009C0BD2 /* Collections */,
+				CC6DE95220405E71009C0BD2 /* Helpers */,
+				CC6DE95020405E71009C0BD2 /* DocTemplate.md */,
+				CC6DE95420405E71009C0BD2 /* LICENSE.md */,
+				CC6DE95120405E71009C0BD2 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		CC6DE94620405E71009C0BD2 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DE94720405E71009C0BD2 /* WeakArray */,
+				CC6DE94A20405E71009C0BD2 /* WeakSet */,
+				CC6DE94D20405E71009C0BD2 /* Bag */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		CC6DE94720405E71009C0BD2 /* WeakArray */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DE94820405E71009C0BD2 /* WeakArray.swift */,
+				CC6DE94920405E71009C0BD2 /* WeakArrayDoc.md */,
+			);
+			path = WeakArray;
+			sourceTree = "<group>";
+		};
+		CC6DE94A20405E71009C0BD2 /* WeakSet */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DE94B20405E71009C0BD2 /* WeakSet.swift */,
+				CC6DE94C20405E71009C0BD2 /* WeakSetDoc.md */,
+			);
+			path = WeakSet;
+			sourceTree = "<group>";
+		};
+		CC6DE94D20405E71009C0BD2 /* Bag */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DE94E20405E71009C0BD2 /* Bag.swift */,
+				CC6DE94F20405E71009C0BD2 /* BagDoc.md */,
+			);
+			path = Bag;
+			sourceTree = "<group>";
+		};
+		CC6DE95220405E71009C0BD2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC6DE95320405E71009C0BD2 /* Weak.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		CC61CADB20405E3A004C6814 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = CC61CADE20405E3A004C6814 /* Build configuration list for PBXProject "SwiftCollections" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CC61CADA20405E3A004C6814;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		CC61CADF20405E3A004C6814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CC61CAE020405E3A004C6814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC61CADE20405E3A004C6814 /* Build configuration list for PBXProject "SwiftCollections" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC61CADF20405E3A004C6814 /* Debug */,
+				CC61CAE020405E3A004C6814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC61CADB20405E3A004C6814 /* Project object */;
+}

@@ -28,7 +28,7 @@ struct Bag<ContainedElement: Hashable> {
         var array = [ContainedElement]()
         contents.forEach { arg in
             let (element, count) = arg
-            count.times { array.append(element) }
+            (0..<count).forEach { _ in array.append(element) }
         }
 
         return array
