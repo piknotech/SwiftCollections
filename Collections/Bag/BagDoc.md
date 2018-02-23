@@ -13,7 +13,7 @@ The `Bag` collection is a collection with `Hashable` as the contained element. I
 - `ExpressibleByArrayLiteral`,
 - `ExpressibleByDictionaryLiteral`
 
-Apart from everything implemented by these protocols, if offers:
+Apart from everything implemented by these protocols, it offers:
 - subscripting to a specific key
 - methods to add members and remove members
 - properties to read unique count, unique elements, total count and total elements
@@ -34,11 +34,11 @@ You can add members to the Bag using `mutating func add(_ member: ContainedEleme
 bag.add("D", occurences: 5)
 ```
 
-You can remove members to the Bag using `mutating func remove(_ member: ContainedElement, occurrences: Int = 1)`:
+You can remove members from the Bag using `mutating func remove(_ removalType: RemovalType, of element: ContainedElement)`:
 
 ```
-bag.remove("D", occurences: 2)
-bag.remove("D", occurences: -1) // Removes all members D
+bag.remove(.any(2), of: "D")
+bag.remove(.all, of: "A")
 ```
 
 You can use a subscript to get the current item count of a member:
