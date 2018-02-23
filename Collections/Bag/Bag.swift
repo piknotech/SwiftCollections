@@ -66,15 +66,16 @@ struct Bag<ContainedElement: Hashable> {
         }
     }
 
-    /// Removes occurences times the specific member. If occurences < 0, all occurences of this member get removed
+    /// Removes occurences times the specific member.
     mutating func remove(_ member: ContainedElement, occurrences: Int = 1) {
+        precondition(occurrences > 0, "Can only remove a positive number of occurrences")
+        
         let currentCount = contents[member] ?? 0
-
-        if occurrences >= 0 && currentCount > occurrences {
-            contents[member] = currentCount - occurrences
-        } else {
-            contents.removeValue(forKey: member)
-        }
+        contents[member] = currentCount - occurrences
+    }
+    
+    mutating func removeAll(_ member: ContainedElement) {
+        contents.removeValue(forKey: member)
     }
 }
 
