@@ -6,7 +6,22 @@ Describe the functionality of your collection here. What does it do? For what ma
 
 ## Implementation
 
-Outline the implementation of this custom collection. Explain specific design decisicions which may be useful to know for any user.
+Name the contained element, the conformances as well as additional interfaces.
+You may use the `Bag` documentation as a reference:
+
+```
+The `Bag` collection is a collection with `Hashable` as the contained element. It conforms to
+- `Sequence`,
+- `Collection`
+- `CustomStringConvertible`,
+- `ExpressibleByArrayLiteral`,
+- `ExpressibleByDictionaryLiteral`
+
+Apart from everything implemented by these protocols, if offers:
+- subscripting to a specific key
+- methods to add members and remove members
+- properties to read unique count, unique elements, total count and total elements
+````
 
 ## Use
 

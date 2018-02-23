@@ -24,7 +24,7 @@ You can create a Bag with an array literal or a dictionary literal:
 
 ```
 var bag: Bag<String> = ["A", "A", "B", "C"]
-or
+// or
 var bag: Bag<String> = ["A": 2, "B": 1, "C": 1]
 ```
 
