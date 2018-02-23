@@ -34,11 +34,10 @@ You can add members to the Bag using `mutating func add(_ member: ContainedEleme
 bag.add("D", occurences: 5)
 ```
 
-You can remove members to the Bag using `mutating func remove(_ member: ContainedElement, occurrences: Int = 1)`:
+You can remove members from the Bag using `mutating func remove(_ member: ContainedElement, occurrences: Int = 1)`:
 
 ```
 bag.remove("D", occurences: 2)
-bag.remove("D", occurences: -1) // Removes all members D
 ```
 
 You can use a subscript to get the current item count of a member:
