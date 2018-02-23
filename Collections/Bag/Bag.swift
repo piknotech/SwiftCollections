@@ -4,11 +4,8 @@
 
 import Foundation
 
-/// A Bag is a collection type that counts the occurences of a specific value.
-/// It simplifies things so the user doesn't have to use dictionaries and perform the logic itself.
-/// Code taken from https://github.com/ecerney/Bag & slightly modified
 struct Bag<ContainedElement: Hashable> {
-    // MARK: - Internal properties
+    // MARK: - Properties
     var uniqueCount: Int {
         return contents.count
     }
@@ -31,7 +28,6 @@ struct Bag<ContainedElement: Hashable> {
         return array
     }
 
-    // MARK: Private properties
     private var contents: [ContainedElement: Int] = [:]
 
     // MARK: - Initializers

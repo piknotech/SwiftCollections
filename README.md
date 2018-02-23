@@ -9,7 +9,7 @@ In the *Collections* folder, each collection has another subfolder. Within this 
 - The **Swift Source File** implementing the custom collection. Its name equals the name of the collection implemented as well as the containing folder.
 - A **Documentation File**, documenting this specific collection. Its name is the containing folders name followed by the suffix "Doc". The extent of this file depends on the collection it documents, but it will always be there at least.
 
-In the *Helpers* folder, helper types / extensions that may be needed for collection implementations are stored. Those aren't part of the collection's folder itself since helpers may be needed for multiple collections at once.
+In the *Helpers* folder, helper types / extensions that may be needed for collection implementations are stored. Those aren't part of the collection's folder itself since helpers may be needed for multiple collections at once. Very tiny helpers that are only needed for one specific collection, may be added in the implementation file itself.
 
 For documentation on a specific collection, see its corresponding doc file.
 
