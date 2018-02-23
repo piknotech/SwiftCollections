@@ -4,13 +4,13 @@
 
 import Foundation
 
-// MARK: - Subtypes
-enum RemovalType {
-    case any(Int)
-    case all
-}
-
 struct Bag<ContainedElement: Hashable> {
+    // MARK: - Subtypes
+    enum RemovalType {
+        case any(Int)
+        case all
+    }
+    
     // MARK: - Properties
     var uniqueCount: Int {
         return contents.count
