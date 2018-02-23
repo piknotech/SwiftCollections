@@ -1,7 +1,9 @@
 # SwiftCollections
-*SwiftCollections* is collection of handy, custom-written Swift collections types. Not all of them are useful in every project, so this is rather a library of custom collections that may be suitable for specific tasks.
+*SwiftCollections* is collection of handy, custom-written Swift collections. Not all of them are useful in every project, so this is rather a library of custom collections that may be suitable for specific tasks.
 
 ## Documentation
+
+In this repo, a collection is not considered a type that has to conform to the `Collection` protocol, but anything that collects something. For an example, where a collection in the terminology of this repo doesn't conform to the `Collection` protocol, see `WeakArray`.
 
 This repo has a fixed file and folder structure:
 
