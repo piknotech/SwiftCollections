@@ -13,7 +13,7 @@ The `Bag` collection is a collection with `Hashable` as the contained element. I
 - `ExpressibleByArrayLiteral`,
 - `ExpressibleByDictionaryLiteral`
 
-Apart from everything implemented by these protocols, if offers:
+Apart from everything implemented by these protocols, it offers:
 - subscripting to a specific key
 - methods to add members and remove members
 - properties to read unique count, unique elements, total count and total elements
