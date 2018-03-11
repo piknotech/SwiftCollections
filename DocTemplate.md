@@ -21,11 +21,15 @@ Apart from everything implemented by these protocols, it offers:
 - subscripting to a specific key
 - methods to add members and remove members
 - properties to read unique count, unique elements, total count and total elements
-````
+```
 
 ## Use
 
-Give sample code on how to use this collection.
+Give sample code on how to use this collection. When providing code snippets, use _```swift_ as the begin operator of the block. This enables markdown to display the code with Swift syntax highlighting:
+
+```swift
+let test = "test" // This code is rendered as Swift code
+```
 
 ## License
 

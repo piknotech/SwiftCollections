@@ -20,32 +20,32 @@ Apart from everything implemented by the protocols, `WeakSet` offers:
 
 You can create a `WeakSet` using an array literal:
 
-```
+```swift
 var weakSet: WeakSet<UIView> = [UIView(), UIView()]
 ```
 
 To add an item, use `mutating func add(_ item: Element)`:
 
-```
+```swift
 let myView = UIView()
 weakSet.add(myView)
 ```
 
 To remove items, use `mutating func remove(_ item: Element)`:
 
-```
+```swift
 weakSet.remove(myView)
 ```
 
 If you don't call the add or remove functions, that auto-perform a clean, it may be suitable, to call it manually from time to time for a large `WeakSet`.
 
-```
+```swift
 weakSet.clean() // Cleans out internal Weak<Element> instances whose contained value is nil
 ```
 
 To access the weakSet's contents, you should use `contents` which returns a set of the contained elements. At this point, you can use interfaces provided by `Collection` or `Sequence`. For a simple emptyness check you can still use `isEmpty` on the original collection, without accessing `contents`:
 
-```
+```swift
 print(weakSet.isEmpty) // Same as weakSet.contents.isEmpty
 print(weakSet.contents.first) // Use of Collection protocol
 for element in weakSet.contents { } // Use of Sequence protocol

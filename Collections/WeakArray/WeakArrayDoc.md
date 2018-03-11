@@ -20,32 +20,32 @@ Apart from everything implemented by the protocols, `WeakArray` offers:
 
 You can create a `WeakArray` using an array literal:
 
-```
+```swift
 var weakArray: WeakArray<UIView> = [UIView(), UIView()]
 ```
 
 To add an item, use `mutating func add(_ item: Element)`:
 
-```
+```swift
 let myView = UIView()
 weakArray.add(myView)
 ```
 
 To remove items that are referentially equal to the one provided as a parameter, use `mutating func removeIdentical(to item: Element)`:
 
-```
+```swift
 weakArray.removeIdentical(to: myView)
 ```
 
 If you don't call the add or remove functions, that auto-perform a clean, it may be suitable, to call it manually from time to time for a large `WeakArray`.
 
-```
+```swift
 weakArray.clean() // Cleans out internal Weak<Element> instances whose contained value is nil
 ```
 
 To access the weakArray's contents, you should use `contents` which returns an array of the contained elements. At this point, you can use interfaces provided by `Collection` or `Sequence`. For a simple emptyness check you can still use `isEmpty` on the original collection, without accessing `contents`:
 
-```
+```swift
 print(weakArray.isEmpty) // Same as weakArray.contents.isEmpty
 print(weakArray.contents.first) // Use of Collection protocol
 for element in weakArray.contents { } // Use of Sequence protocol
