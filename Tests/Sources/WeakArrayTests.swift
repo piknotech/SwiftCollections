@@ -10,8 +10,44 @@
 import XCTest
 
 class WeakArrayTests: XCTestCase {
-    // TODO: Test properly
-    func test() {
-        XCTAssertEqual(1, 1)
+    // MARK: - Subtypes
+    class SampleObject { }
+
+    // MARK: - Properties
+    private let arraySize = 3
+    private lazy var array: [SampleObject]? = {
+        (0..<arraySize).map { _ in SampleObject() }
+    }()
+
+    // MARK: - Methods
+    func testCount() {
+        let weakArray = WeakArray(array!)
+        XCTAssertEqual(weakArray.contents.count, array!.count)
+    }
+
+    func testIsEmpty() {
+        let weakArray = WeakArray(array!)
+        XCTAssertEqual(weakArray.isEmpty, array!.isEmpty)
+    }
+
+    func testAddingAndRemoving() {
+        var weakArray = WeakArray(array!)
+
+        // Test adding
+        let sample = array!.first!
+        let sampleCount = 3
+        for _ in 0..<sampleCount { weakArray.add(sample) }
+        XCTAssertEqual(weakArray.contents.filter { $0 === sample }.count, sampleCount + 1)
+
+        // Test removing
+        weakArray.removeIdentical(to: sample)
+        XCTAssertEqual(weakArray.contents.count, arraySize - 1)
+    }
+
+    func testCleaning() {
+        let weakArray = WeakArray(array!)
+        array = nil
+        XCTAssertEqual(weakArray.contents.count, 0)
+        XCTAssertEqual(weakArray.isEmpty, true)
     }
 }
