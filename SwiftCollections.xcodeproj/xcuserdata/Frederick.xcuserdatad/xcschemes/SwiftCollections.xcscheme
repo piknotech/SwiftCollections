@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCAA8C252056B3D9000F054D"
-               BuildableName = "SwiftCollections"
+               BlueprintIdentifier = "CC20BAEB2056D8B6001773AA"
+               BuildableName = "libSwiftCollections.a"
                BlueprintName = "SwiftCollections"
                ReferencedContainer = "container:SwiftCollections.xcodeproj">
             </BuildableReference>
@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCAA8C3D2056BECF000F054D"
-               BuildableName = "SwiftCollectionsTests.xctest"
-               BlueprintName = "SwiftCollectionsTests"
+               BlueprintIdentifier = "CC20BAFD2056D9EF001773AA"
+               BuildableName = "SwiftCollectionTests.xctest"
+               BlueprintName = "SwiftCollectionTests"
                ReferencedContainer = "container:SwiftCollections.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCAA8C252056B3D9000F054D"
-            BuildableName = "SwiftCollections"
+            BlueprintIdentifier = "CC20BAEB2056D8B6001773AA"
+            BuildableName = "libSwiftCollections.a"
             BlueprintName = "SwiftCollections"
             ReferencedContainer = "container:SwiftCollections.xcodeproj">
          </BuildableReference>
@@ -63,16 +63,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCAA8C252056B3D9000F054D"
-            BuildableName = "SwiftCollections"
+            BlueprintIdentifier = "CC20BAEB2056D8B6001773AA"
+            BuildableName = "libSwiftCollections.a"
             BlueprintName = "SwiftCollections"
             ReferencedContainer = "container:SwiftCollections.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -82,16 +81,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCAA8C252056B3D9000F054D"
-            BuildableName = "SwiftCollections"
+            BlueprintIdentifier = "CC20BAEB2056D8B6001773AA"
+            BuildableName = "libSwiftCollections.a"
             BlueprintName = "SwiftCollections"
             ReferencedContainer = "container:SwiftCollections.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

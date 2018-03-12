@@ -4,19 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SwiftCollectionTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SwiftCollections.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>SwiftCollectionsTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CC20BAEB2056D8B6001773AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC20BAFD2056D9EF001773AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CCAA8C252056B3D9000F054D</key>
 		<dict>
 			<key>primary</key>
