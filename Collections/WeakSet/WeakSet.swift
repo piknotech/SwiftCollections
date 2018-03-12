@@ -1,17 +1,17 @@
 //
 //  WeakSet.swift
+//  SwiftCollections
+//
+//  Created by Frederick Pietschmann on 12.03.18.
+//  Released as a part of SwiftCollections. https://www.github.com/fredpi/SwiftCollections
 //
 
 import Foundation
 
-struct WeakSet<Element>: CustomStringConvertible, ExpressibleByArrayLiteral where Element: AnyObject, Element: Hashable {
+struct WeakSet<Element> where Element: AnyObject, Element: Hashable {
     // MARK: - Properties
     var isEmpty: Bool {
         return contents.isEmpty
-    }
-
-    var description: String {
-        return "\(contents.count) Item(s): \(String(describing: contents))"
     }
 
     var contents: Set<Element> {
@@ -29,10 +29,6 @@ struct WeakSet<Element>: CustomStringConvertible, ExpressibleByArrayLiteral wher
         }
     }
 
-    init(arrayLiteral elements: Element...) {
-        self.init(elements)
-    }
-
     // MARK: - Methods
     mutating func insert(_ item: Element) {
         clean()
@@ -46,5 +42,19 @@ struct WeakSet<Element>: CustomStringConvertible, ExpressibleByArrayLiteral wher
 
     mutating func clean() {
         wrappedContents = wrappedContents.filter { $0.value != nil }
+    }
+}
+
+// MARK: - CustomStringConvertible
+extension WeakSet: CustomStringConvertible {
+    var description: String {
+        return "\(contents.count) Item(s): \(String(describing: contents))"
+    }
+}
+
+// MARK: - ExpressibleByArrayLiteral
+extension WeakSet: ExpressibleByArrayLiteral {
+    init(arrayLiteral elements: Element...) {
+        self.init(elements)
     }
 }
