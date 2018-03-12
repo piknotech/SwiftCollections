@@ -77,20 +77,20 @@ struct Bag<ContainedElement: Hashable> {
     mutating func remove(_ removalType: RemovalType, of element: ContainedElement) {
         switch removalType {
         case .any(let count):
-            precondition(occurrences > 0, "Can only remove a positive number of occurrences")
+            precondition(count > 0, "Can only remove a positive number of occurrences")
             
-            let currentCount = contents[member] ?? 0
-            precondition(occurrences <= currentCount, "Can only remove as much occurrences as the element exists in the collection")
+            let currentCount = contents[element] ?? 0
+            precondition(count <= currentCount, "Can only remove as much occurrences as the element exists in the collection")
             
             // Remove or update element
-            if currentCount == occurrences {
-                contents.removeValue(forKey: member)
+            if currentCount == count {
+                contents.removeValue(forKey: element)
             } else {
-                contents[member] = currentCount - occurrences
+                contents[element] = currentCount - count
             }
             
         case .all:
-            contents.removeValue(forKey: member)
+            contents.removeValue(forKey: element)
         }
     }
 }
