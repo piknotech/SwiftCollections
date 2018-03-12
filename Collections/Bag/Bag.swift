@@ -1,5 +1,9 @@
 //
 //  Bag.swift
+//  SwiftCollections
+//
+//  Created by Frederick Pietschmann on 12.03.18.
+//  Released as a part of SwiftCollections. https://www.github.com/fredpi/SwiftCollections
 //
 
 import Foundation
@@ -10,7 +14,7 @@ struct Bag<ContainedElement: Hashable> {
         case any(Int)
         case all
     }
-    
+
     // MARK: - Properties
     var uniqueCount: Int {
         return contents.count
@@ -73,22 +77,26 @@ struct Bag<ContainedElement: Hashable> {
     }
 
     /// Removes occurrences times the specific member, or remove all occurrences.
-    /// The number of occurrences must be positive and must not be greater than the current count of the specified element.
+    /// The number of occurrences must be positive and must not be greater
+    /// than the current count of the specified element.
     mutating func remove(_ removalType: RemovalType, of element: ContainedElement) {
         switch removalType {
-        case .any(let count):
-            precondition(count > 0, "Can only remove a positive number of occurrences")
-            
+        case .any(let occurences):
+            precondition(occurences > 0, "Can only remove a positive number of occurrences")
+
             let currentCount = contents[element] ?? 0
-            precondition(count <= currentCount, "Can only remove as much occurrences as the element exists in the collection")
-            
+            precondition(
+                occurences <= currentCount,
+                "Can only remove as much occurrences as the element exists in the collection"
+            )
+
             // Remove or update element
-            if currentCount == count {
+            if currentCount == occurences {
                 contents.removeValue(forKey: element)
             } else {
-                contents[element] = currentCount - count
+                contents[element] = currentCount - occurences
             }
-            
+
         case .all:
             contents.removeValue(forKey: element)
         }

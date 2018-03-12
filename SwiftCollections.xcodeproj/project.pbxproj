@@ -39,6 +39,8 @@
 		CC6DE95420405E71009C0BD2 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		CCAA8C262056B3D9000F054D /* SwiftCollections */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftCollections; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAA8C342056B4F2000F054D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CCAA8C382056B6CF000F054D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		CCAA8C392056B814000F054D /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 				CC6DE95020405E71009C0BD2 /* DocTemplate.md */,
 				CC6DE95420405E71009C0BD2 /* LICENSE.md */,
 				CC6DE95120405E71009C0BD2 /* README.md */,
+				CCAA8C392056B814000F054D /* CONTRIBUTING.md */,
 				CCAA8C342056B4F2000F054D /* main.swift */,
-				CCAA8C272056B3D9000F054D /* Products */,
+				CCAA8C272056B3D9000F054D /* Loose References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,12 +113,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CCAA8C272056B3D9000F054D /* Products */ = {
+		CCAA8C272056B3D9000F054D /* Loose References */ = {
 			isa = PBXGroup;
 			children = (
+				CCAA8C382056B6CF000F054D /* .swiftlint.yml */,
 				CCAA8C262056B3D9000F054D /* SwiftCollections */,
 			);
-			name = Products;
+			name = "Loose References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +132,7 @@
 				CCAA8C222056B3D9000F054D /* Sources */,
 				CCAA8C232056B3D9000F054D /* Frameworks */,
 				CCAA8C242056B3D9000F054D /* CopyFiles */,
+				CCAA8C372056B568000F054D /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -161,7 +166,7 @@
 				en,
 			);
 			mainGroup = CC61CADA20405E3A004C6814;
-			productRefGroup = CCAA8C272056B3D9000F054D /* Products */;
+			productRefGroup = CCAA8C272056B3D9000F054D /* Loose References */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -169,6 +174,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCAA8C372056B568000F054D /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCAA8C222056B3D9000F054D /* Sources */ = {

@@ -1,15 +1,15 @@
 //
 //  WeakArray.swift
+//  SwiftCollections
+//
+//  Created by Frederick Pietschmann on 12.03.18.
+//  Released as a part of SwiftCollections. https://www.github.com/fredpi/SwiftCollections
 //
 
-struct WeakArray<Element>: CustomStringConvertible, ExpressibleByArrayLiteral where Element: AnyObject {
+struct WeakArray<Element> where Element: AnyObject {
     // MARK: - Properties
     var isEmpty: Bool {
         return contents.isEmpty
-    }
-
-    var description: String {
-        return "\(contents.count) Item(s): \(String(describing: contents))"
     }
 
     var contents: [Element] {
@@ -27,10 +27,6 @@ struct WeakArray<Element>: CustomStringConvertible, ExpressibleByArrayLiteral wh
         }
     }
 
-    init(arrayLiteral elements: Element...) {
-        self.init(elements)
-    }
-
     // MARK: - Methods
     mutating func add(_ item: Element) {
         clean()
@@ -44,5 +40,19 @@ struct WeakArray<Element>: CustomStringConvertible, ExpressibleByArrayLiteral wh
 
     mutating func clean() {
         wrappedContents = wrappedContents.filter { $0.value != nil }
+    }
+}
+
+// MARK: - CustomStringConvertible
+extension WeakArray: CustomStringConvertible {
+    var description: String {
+        return "\(contents.count) Item(s): \(String(describing: contents))"
+    }
+}
+
+// MARK: - ExpressibleByArrayLiteral
+extension WeakArray: ExpressibleByArrayLiteral {
+    init(arrayLiteral elements: Element...) {
+        self.init(elements)
     }
 }
