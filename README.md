@@ -1,5 +1,5 @@
 # SwiftCollections
-*SwiftCollections* is collection of handy, custom-written Swift collections. Not all of them are useful in every project, so this is rather a library of custom collections that may be suitable for specific tasks.
+*SwiftCollections* is collection of handy, custom-written Swift collections. Not all of them are useful in every project, so this is rather a library of custom collections that may be suitable for specific tasks. For the sake of being apble to build it, it's nonetheless wrapped as a framework.
 
 ## Documentation
 
