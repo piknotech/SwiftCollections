@@ -43,10 +43,10 @@ If you don't call the add or remove functions, that auto-perform a clean, it may
 weakArray.clean() // Cleans out internal Weak<Element> instances whose contained value is nil
 ```
 
-To access the weakArray's contents, you should use `contents` which returns an array of the contained elements. At this point, you can use interfaces provided by `Collection` or `Sequence`. For a simple emptyness check you can still use `isEmpty` on the original collection, without accessing `contents`:
+To access the `WeakArray`'s contents, you should use `contents` which returns an array of the contained elements. At this point, you can use interfaces provided by `Collection` or `Sequence`:
 
 ```swift
-print(weakArray.isEmpty) // Same as weakArray.contents.isEmpty
+print(weakArray.contents.isEmpty) // Use of Collection protocol
 print(weakArray.contents.first) // Use of Collection protocol
 for element in weakArray.contents { } // Use of Sequence protocol
 ```

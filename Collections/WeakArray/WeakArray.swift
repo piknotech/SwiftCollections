@@ -8,10 +8,6 @@
 
 struct WeakArray<Element> where Element: AnyObject {
     // MARK: - Properties
-    var isEmpty: Bool {
-        return contents.isEmpty
-    }
-
     var contents: [Element] {
         return wrappedContents.flatMap { $0.value }
     }

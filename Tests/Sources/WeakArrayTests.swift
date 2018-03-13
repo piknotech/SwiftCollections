@@ -25,11 +25,6 @@ class WeakArrayTests: XCTestCase {
         XCTAssertEqual(weakArray.contents.count, array!.count)
     }
 
-    func testIsEmpty() {
-        let weakArray = WeakArray(array!)
-        XCTAssertEqual(weakArray.isEmpty, array!.isEmpty)
-    }
-
     func testAddingAndRemoving() {
         var weakArray = WeakArray(array!)
 
@@ -47,7 +42,6 @@ class WeakArrayTests: XCTestCase {
     func testCleaning() {
         let weakArray = WeakArray(array!)
         array = nil
-        XCTAssertEqual(weakArray.contents.count, 0)
-        XCTAssertEqual(weakArray.isEmpty, true)
+        XCTAssertEqual(weakArray.contents.isEmpty, true)
     }
 }

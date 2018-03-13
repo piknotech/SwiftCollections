@@ -35,11 +35,6 @@ class WeakSetTests: XCTestCase {
         XCTAssertEqual(weakSet.contents.count, set!.count)
     }
 
-    func testIsEmpty() {
-        let weakSet = WeakSet(set!)
-        XCTAssertEqual(weakSet.isEmpty, set!.isEmpty)
-    }
-
     func testInsertingAndRemoving() {
         var weakSet = WeakSet(set!)
 
@@ -57,7 +52,6 @@ class WeakSetTests: XCTestCase {
     func testCleaning() {
         let weakSet = WeakSet(set!)
         set = nil
-        XCTAssertEqual(weakSet.contents.count, 0)
-        XCTAssertEqual(weakSet.isEmpty, true)
+        XCTAssertEqual(weakSet.contents.isEmpty, true)
     }
 }

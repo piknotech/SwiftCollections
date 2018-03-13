@@ -10,10 +10,6 @@ import Foundation
 
 struct WeakSet<Element> where Element: AnyObject, Element: Hashable {
     // MARK: - Properties
-    var isEmpty: Bool {
-        return contents.isEmpty
-    }
-
     var contents: Set<Element> {
         return Set(wrappedContents.flatMap { $0.value })
     }

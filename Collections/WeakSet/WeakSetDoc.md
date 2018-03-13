@@ -43,10 +43,10 @@ If you don't call the add or remove functions, that auto-perform a clean, it may
 weakSet.clean() // Cleans out internal Weak<Element> instances whose contained value is nil
 ```
 
-To access the weakSet's contents, you should use `contents` which returns a set of the contained elements. At this point, you can use interfaces provided by `Collection` or `Sequence`. For a simple emptyness check you can still use `isEmpty` on the original collection, without accessing `contents`:
+To access the `WeakSet`'s contents, you should use `contents` which returns a set of the contained elements. At this point, you can use interfaces provided by `Collection` or `Sequence`:
 
 ```swift
-print(weakSet.isEmpty) // Same as weakSet.contents.isEmpty
+print(weakSet.contents.isEmpty) // Use of Collection protocol
 print(weakSet.contents.first) // Use of Collection protocol
 for element in weakSet.contents { } // Use of Sequence protocol
 ```
