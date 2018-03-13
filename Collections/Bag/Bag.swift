@@ -82,7 +82,7 @@ struct Bag<ContainedElement: Hashable> {
     mutating func remove(_ removalType: RemovalType, of element: ContainedElement) {
         switch removalType {
         case .any(let occurences):
-            precondition(occurences > 0, "Can only remove a positive number of occurrences")
+            precondition(occurences >= 0, "Can only remove a positive number of occurrences")
 
             let currentCount = contents[element] ?? 0
             precondition(
@@ -150,7 +150,7 @@ extension Bag: Collection {
     }
 
     subscript (position: Index) -> Iterator.Element {
-        precondition((startIndex ..< endIndex).contains(position), "out of bounds")
+        precondition((startIndex ..< endIndex).contains(position), "Out of bounds")
         let dictionaryElement = contents[position.index]
         return (element: dictionaryElement.key, count: dictionaryElement.value)
     }

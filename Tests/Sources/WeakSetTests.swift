@@ -14,11 +14,11 @@ class WeakSetTests: XCTestCase {
     class SampleObject: Hashable {
         var hashValue: Int
 
-        init(hashValue: Int) {
+        init(_ hashValue: Int) {
             self.hashValue = hashValue
         }
 
-        static func == (lhs: WeakSetTests.SampleObject, rhs: WeakSetTests.SampleObject) -> Bool {
+        static func == (lhs: SampleObject, rhs: SampleObject) -> Bool {
             return lhs.hashValue == rhs.hashValue
         }
     }
@@ -26,7 +26,7 @@ class WeakSetTests: XCTestCase {
     // MARK: - Properties
     private let setSize = 3
     private lazy var set: Set<SampleObject>? = {
-        Set((0..<setSize).map { index in SampleObject(hashValue: index) })
+        Set((0..<setSize).map { SampleObject($0) })
     }()
 
     // MARK: - Methods
