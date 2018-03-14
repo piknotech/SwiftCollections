@@ -4,6 +4,9 @@
     <a href="https://travis-ci.org/fredpi/SwiftCollections">
         <img src="https://travis-ci.org/fredpi/SwiftCollections.svg?branch=stable" alt="Build Status">
     </a>
+    <a href="https://codecov.io/gh/fredpi/SwiftCollections">
+        <img src="https://codecov.io/gh/fredpi/SwiftCollections/branch/stable/graph/badge.svg" alt="Code Coverage">
+    </a>
     <img src="https://img.shields.io/badge/Swift-4.0-FFAC45.svg" alt="Swift: 4.0">
     <a href="https://github.com/fredpi/SwiftCollections/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
