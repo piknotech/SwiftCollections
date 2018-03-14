@@ -1,5 +1,22 @@
 # SwiftCollections
 
+<p align="center">
+    <a href="https://travis-ci.org/fredpi/SwiftCollections">
+        <img src="https://travis-ci.org/fredpi/SwiftCollections.svg?branch=stable" alt="Build Status">
+    </a>
+    <img src="https://img.shields.io/badge/Swift-4.0-FFAC45.svg" alt="Swift: 4.0">
+    <a href="https://github.com/fredpi/SwiftCollections/blob/stable/LICENSE.md">
+        <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
+    </a>
+</p>
+
+<p align="center">
+    <a href="#documentation">Documentation</a>
+  • <a href="https://github.com/fredpi/SwiftCollections/issues">Issues</a>
+  • <a href="#contributing">Contributing</a>
+  • <a href="#license">License</a>
+</p>
+
 *SwiftCollections* is collection of handy, custom-written Swift collections. Not all of them are useful in every project, so this is rather a library of custom collections that may be suitable for specific tasks. For the sake of being able to build & test it, the files are nonetheless wrapped together as a static cocoa touch library of no further use.
 
 ## Documentation
