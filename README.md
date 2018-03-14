@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/fredpi/SwiftCollections/stable/Logo.png" style="width: 600; height: auto;">
+    <img src="https://raw.githubusercontent.com/fredpi/SwiftCollections/stable/Logo.png" width=600>
 </p>
 
 <p align="center">
