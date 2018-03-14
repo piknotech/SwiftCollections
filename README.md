@@ -1,4 +1,7 @@
-# SwiftCollections
+<p align="center">
+    <img src="https://raw.githubusercontent.com/fredpi/SwiftCollections/stable/Logo.png"
+      width=600 height=200>
+</p>
 
 <p align="center">
     <a href="https://travis-ci.org/fredpi/SwiftCollections">
@@ -7,7 +10,9 @@
     <a href="https://codecov.io/gh/fredpi/SwiftCollections">
         <img src="https://codecov.io/gh/fredpi/SwiftCollections/branch/stable/graph/badge.svg" alt="Code Coverage">
     </a>
-    <img src="https://img.shields.io/badge/Swift-4.0-FFAC45.svg" alt="Swift: 4.0">
+    <a href="#">
+        <img src="https://img.shields.io/badge/Swift-4.0-FFAC45.svg" alt="Swift: 4.0">
+    </a>
     <a href="https://github.com/fredpi/SwiftCollections/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
     </a>
