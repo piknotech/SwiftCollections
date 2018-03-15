@@ -17,15 +17,18 @@
 <p align="center">
     <a href="#documentation">Documentation</a>
   • <a href="https://github.com/fredpi/SwiftCollections/issues">Issues</a>
+  • <a href="https://github.com/fredpi/SwiftCollections/pulls">Pull Requests</a>
   • <a href="#contributing">Contributing</a>
   • <a href="#license">License</a>
 </p>
 
-*SwiftCollections* is collection of handy, custom-written Swift collections. Not all of them are useful in every project, so this is rather a library of custom collections that may be suitable for specific tasks. For the sake of being able to build & test it, the files are nonetheless wrapped together as a static cocoa touch library of no further use.
+*SwiftCollections* is collection of handy, custom-written Swift collections, a category providing a great way to use all the power of Swift with protocols and generics.
+
+Not all of the collections in this repo are useful in every project, so this is rather a library of types being suitabvle for specific tasks. For the sake of being able to build & test it, the files are nonetheless wrapped together as a static cocoa touch library of no further use.
 
 ## Documentation
 
-In this repo, a collection is not considered a type that has to conform to the `Collection` protocol, but anything that collects something. For an example, where a collection in the terminology of this repo doesn't conform to the `Collection` protocol, see `WeakArray`.
+In this repo, a collection is not considered a type that has to conform to the `Collection` protocol, but anything that collects any type in any way. However, collecting must be the main purpose of the type, so a `UIViewController` subclass with two arrays collecting `String` e. g. wouldn't properly fit into this scheme. For an example, where a collection in the terminology of this repo doesn't conform to the `Collection` protocol, but has the main purpose of collecting something, see `WeakArray`.
 
 This repo has a fixed file and folder structure:
 
