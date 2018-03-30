@@ -160,6 +160,13 @@ extension Bag: Collection {
     }
 }
 
+// MARK: - Equatable
+extension Bag: Equatable {
+    static func == (lhs: Bag, rhs: Bag) -> Bool {
+        return lhs.contents == rhs.contents
+    }
+}
+
 // MARK: - BagIndex
 struct BagIndex<Element: Hashable> {
     fileprivate let index: DictionaryIndex<Element, Int>

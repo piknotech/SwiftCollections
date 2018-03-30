@@ -70,9 +70,7 @@ class BagTests: XCTestCase {
             object2: 2
         ]
 
-        // Direct comparing not available (maybe with Swift 4.1 & Conditional Conformance?)
-        let matches = baseBag.reduce(true) { $0 && compareBag[$1.element] == $1.count }
-        XCTAssertEqual(matches, true)
+        XCTAssertEqual(baseBag, compareBag)
     }
 
     func testAdd() {
