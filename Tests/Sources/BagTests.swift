@@ -10,27 +10,11 @@
 import XCTest
 
 class BagTests: XCTestCase {
-    // MARK: - Subtypes
-    class SampleObject: Hashable {
-        var hashValue: Int
-
-        init(_ hashValue: Int) {
-            self.hashValue = hashValue
-        }
-
-        static func == (lhs: SampleObject, rhs: SampleObject) -> Bool {
-            return lhs.hashValue == rhs.hashValue
-        }
-    }
-
     // MARK: - Properties
-    private let object1 = SampleObject(1)
-    private let object2 = SampleObject(2)
-    private let object3 = SampleObject(3)
-    private lazy var baseBag: Bag<SampleObject> = {
+    private lazy var baseBag: Bag<Int> = {
         // Assuming array init works properly
         // Testing it in-depth would require private member checking...
-        let bag: Bag<SampleObject> = [object1, object2, object2]
+        let bag: Bag<Int> = [1, 2, 2]
 
         return bag
     }()
@@ -47,13 +31,13 @@ class BagTests: XCTestCase {
     }
 
     func testUniqueElements() {
-        var uniqueElements = [SampleObject]()
+        var uniqueElements = [Int]()
         for elem in baseBag { uniqueElements.append(elem.element) }
         XCTAssertEqual(baseBag.uniqueElements, uniqueElements)
     }
 
     func testTotalElements() {
-        var totalElements = [SampleObject]()
+        var totalElements = [Int]()
         for elem in baseBag {
             for _ in 0..<elem.count {
                 totalElements.append(elem.element)
@@ -65,9 +49,9 @@ class BagTests: XCTestCase {
 
     func testDictionaryInit() {
         // Replicate base bag with dict init
-        let compareBag: Bag<SampleObject> = [
-            object1: 1,
-            object2: 2
+        let compareBag: Bag<Int> = [
+            1: 1,
+            2: 2
         ]
 
         XCTAssertEqual(baseBag, compareBag)
@@ -76,40 +60,40 @@ class BagTests: XCTestCase {
     func testEquatable() {
         var compareBag = baseBag
         XCTAssertEqual(baseBag, compareBag)
-        compareBag.add(object3)
+        compareBag.add(3)
         XCTAssertNotEqual(baseBag, compareBag)
     }
 
     func testAdd() {
-        var bag: Bag<SampleObject> = [object1, object2]
+        var bag: Bag<Int> = [1, 2]
 
-        bag.add(object1)
-        XCTAssertEqual(bag[object1], 2)
+        bag.add(1)
+        XCTAssertEqual(bag[1], 2)
 
-        bag.add(object2, occurrences: 4)
-        XCTAssertEqual(bag[object2], 5)
+        bag.add(2, occurrences: 4)
+        XCTAssertEqual(bag[2], 5)
 
-        bag.add(object3, occurrences: 3)
-        XCTAssertEqual(bag[object3], 3)
+        bag.add(3, occurrences: 3)
+        XCTAssertEqual(bag[3], 3)
     }
 
     func testRemove() {
-        var bag: Bag<SampleObject> = [
-            object1,
-            object2, object2,
-            object3, object3, object3
+        var bag: Bag<Int> = [
+            1,
+            2, 2,
+            3, 3, 3
         ]
 
-        bag.remove(.any(0), of: object1)
-        XCTAssertEqual(bag[object1], 1)
+        bag.remove(.any(0), of: 1)
+        XCTAssertEqual(bag[1], 1)
 
-        bag.remove(.any(1), of: object1)
-        XCTAssertEqual(bag[object1], 0)
+        bag.remove(.any(1), of: 1)
+        XCTAssertEqual(bag[1], 0)
 
-        bag.remove(.all, of: object2)
-        XCTAssertEqual(bag[object2], 0)
+        bag.remove(.all, of: 2)
+        XCTAssertEqual(bag[2], 0)
 
-        bag.remove(.any(2), of: object3)
-        XCTAssertEqual(bag[object3], 1)
+        bag.remove(.any(2), of: 3)
+        XCTAssertEqual(bag[3], 1)
     }
 }
