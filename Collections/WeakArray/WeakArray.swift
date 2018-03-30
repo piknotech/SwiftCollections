@@ -9,7 +9,7 @@
 struct WeakArray<Element> where Element: AnyObject {
     // MARK: - Properties
     var contents: [Element] {
-        return wrappedContents.flatMap { $0.value }
+        return wrappedContents.compactMap { $0.value }
     }
 
     private var wrappedContents = [Weak<Element>]()

@@ -11,7 +11,7 @@ import Foundation
 struct WeakSet<Element> where Element: AnyObject, Element: Hashable {
     // MARK: - Properties
     var contents: Set<Element> {
-        return Set(wrappedContents.flatMap { $0.value })
+        return Set(wrappedContents.compactMap { $0.value })
     }
 
     private var wrappedContents = Set<Weak<Element>>()
