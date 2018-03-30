@@ -73,6 +73,13 @@ class BagTests: XCTestCase {
         XCTAssertEqual(baseBag, compareBag)
     }
 
+    func testEquatable() {
+        var compareBag = baseBag
+        XCTAssertEqual(baseBag, compareBag)
+        compareBag.add(object3)
+        XCTAssertNotEqual(baseBag, compareBag)
+    }
+
     func testAdd() {
         var bag: Bag<SampleObject> = [object1, object2]
 

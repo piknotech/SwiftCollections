@@ -63,7 +63,7 @@ print(newBag.uniqueElements) // Prints ["A, "B"]
 print(newBag.totalElements) // Prints ["A, "A", "B"]
 ```
 
-The methods provided by `Collection` and `Sequence` are available just like you're used to it.
+The methods provided by `Collection` and `Sequence` are available just like you're used to it. With `Bag` conforming to `Equatable`, you can also perform equality checks.
 
 ## License
 
