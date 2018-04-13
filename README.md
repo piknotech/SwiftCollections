@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/fredpi/SwiftCollections/stable/Logo.png" width=600>
+    <img src="https://raw.githubusercontent.com/piknotech/SwiftCollections/stable/Logo.png" width=600>
 </p>
 
 <p align="center">
@@ -9,15 +9,15 @@
     <a href="#">
         <img src="https://img.shields.io/badge/Swift-4.1-FFAC45.svg" alt="Swift: 4.1">
     </a>
-    <a href="https://github.com/fredpi/SwiftCollections/blob/stable/LICENSE.md">
+    <a href="https://github.com/piknotech/SwiftCollections/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License: MIT">
     </a>
 </p>
 
 <p align="center">
     <a href="#documentation">Documentation</a>
-  • <a href="https://github.com/fredpi/SwiftCollections/issues">Issues</a>
-  • <a href="https://github.com/fredpi/SwiftCollections/pulls">Pull Requests</a>
+  • <a href="https://github.com/piknotech/SwiftCollections/issues">Issues</a>
+  • <a href="https://github.com/piknotech/SwiftCollections/pulls">Pull Requests</a>
   • <a href="#contributing">Contributing</a>
   • <a href="#license">License</a>
 </p>
@@ -42,7 +42,7 @@ For documentation on a specific collection, see its corresponding doc file.
 
 ## Contributing
 
-Contributions are welcome. See [CONTRIBUTING.md](https://github.com/fredpi/SwiftCollections/blob/stable/CONTRIBUTING.md) for in-depth information.
+Contributions are welcome. See [CONTRIBUTING.md](https://github.com/piknotech/SwiftCollections/blob/stable/CONTRIBUTING.md) for in-depth information.
 
 ## License
-This library is released under the [MIT License](http://opensource.org/licenses/MIT). See [LICENSE.md](https://github.com/fredpi/SwiftCollections/blob/stable/LICENSE.md) for details.
+This library is released under the [MIT License](http://opensource.org/licenses/MIT). See [LICENSE.md](https://github.com/piknotech/SwiftCollections/blob/stable/LICENSE.md) for details.

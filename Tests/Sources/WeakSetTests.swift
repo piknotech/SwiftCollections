@@ -3,7 +3,7 @@
 //  SwiftCollectionsTests
 //
 //  Created by Frederick Pietschmann on 12.03.18.
-//  Released as a part of SwiftCollections. https://www.github.com/fredpi/SwiftCollections
+//  Released as a part of SwiftCollections. https://www.github.com/piknotech/SwiftCollections
 //
 
 @testable import SwiftCollections
