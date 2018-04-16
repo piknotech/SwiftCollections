@@ -39,7 +39,7 @@ Please obey these guidelines:
 //  SwiftCollections[Tests]
 //
 //  Created by [Your Name] on [Day (2 digits)].[Month (2 digits)].[Year (2 digits)].
-//  Released as a part of SwiftCollections. https://www.github.com/piknotech/SwiftCollections
+//  Copyright © 2018 Piknotech. All rights reserved.
 //
 ```
 

@@ -3,7 +3,7 @@
 //  SwiftCollections
 //
 //  Created by Frederick Pietschmann on 12.03.18.
-//  Released as a part of SwiftCollections. https://www.github.com/piknotech/SwiftCollections
+//  Copyright © 2018 Piknotech. All rights reserved.
 //
 
 struct WeakArray<Element> where Element: AnyObject {

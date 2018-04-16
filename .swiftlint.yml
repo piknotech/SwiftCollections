@@ -34,7 +34,7 @@ file_header:
                     \/\/  SwiftCollections(Tests)?
                     \/\/
                     \/\/  Created by [^\(\)\d\n]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
-                    \/\/  Released as a part of SwiftCollections. https:\/\/www.github.com\/piknotech\/SwiftCollections
+                    \/\/  Copyright © 2018 Piknotech\. All rights reserved.
                     \/\/
 
 custom_rules:
