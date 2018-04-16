@@ -42,7 +42,7 @@ struct WeakArray<Element> where Element: AnyObject {
 // MARK: - CustomStringConvertible
 extension WeakArray: CustomStringConvertible {
     var description: String {
-        return "\(contents.count) Item(s): \(String(describing: contents))"
+        return "WeakArray<\(String(describing: contents))>"
     }
 }
 

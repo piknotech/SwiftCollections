@@ -1,0 +1,7 @@
+# WeakDictionary
+
+## Functionality
+
+## Implementation
+
+## Use
