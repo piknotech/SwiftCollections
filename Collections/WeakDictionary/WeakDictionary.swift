@@ -32,6 +32,7 @@ struct WeakDictionary<Key: Hashable, Value: Hashable> where Value: AnyObject {
         }
 
         set(newValue) {
+            clean()
             wrappedContents[key] = newValue.map(Weak.init)
         }
     }
