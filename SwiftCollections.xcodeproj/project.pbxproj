@@ -15,8 +15,8 @@
 		CC20BB092056DA13001773AA /* BagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C482056C02C000F054D /* BagTests.swift */; };
 		CC20BB0A2056DA13001773AA /* WeakArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C402056BECF000F054D /* WeakArrayTests.swift */; };
 		CC20BB0B2056DA13001773AA /* WeakSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C462056C025000F054D /* WeakSetTests.swift */; };
+		CC850F3F2086820B00E4E890 /* WeakDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E720852C8600E2413A /* WeakDictionaryTests.swift */; };
 		CCC505E420852BFC00E2413A /* WeakDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E320852BFC00E2413A /* WeakDictionary.swift */; };
-		CCC505E820852C8600E2413A /* WeakDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E720852C8600E2413A /* WeakDictionaryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,7 +312,6 @@
 				CC20BAF82056D9B8001773AA /* WeakSet.swift in Sources */,
 				CCC505E420852BFC00E2413A /* WeakDictionary.swift in Sources */,
 				CC20BAF92056D9B8001773AA /* Weak.swift in Sources */,
-				CCC505E820852C8600E2413A /* WeakDictionaryTests.swift in Sources */,
 				CC20BAF62056D9B8001773AA /* Bag.swift in Sources */,
 				CC20BAF72056D9B8001773AA /* WeakArray.swift in Sources */,
 			);
@@ -323,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC20BB092056DA13001773AA /* BagTests.swift in Sources */,
+				CC850F3F2086820B00E4E890 /* WeakDictionaryTests.swift in Sources */,
 				CC20BB0A2056DA13001773AA /* WeakArrayTests.swift in Sources */,
 				CC20BB0B2056DA13001773AA /* WeakSetTests.swift in Sources */,
 			);
