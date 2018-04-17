@@ -106,7 +106,7 @@ struct Bag<ContainedElement: Hashable> {
 // MARK: - CustomStringConvertible
 extension Bag: CustomStringConvertible {
     var description: String {
-        return String(describing: contents)
+        return "Bag<\(String(describing: contents))>"
     }
 }
 

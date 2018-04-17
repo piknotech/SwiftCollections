@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WeakSet<Element> where Element: AnyObject, Element: Hashable {
+struct WeakSet<Element: Hashable> where Element: AnyObject {
     // MARK: - Properties
     var contents: Set<Element> {
         return Set(wrappedContents.compactMap { $0.value })
@@ -44,7 +44,7 @@ struct WeakSet<Element> where Element: AnyObject, Element: Hashable {
 // MARK: - CustomStringConvertible
 extension WeakSet: CustomStringConvertible {
     var description: String {
-        return "\(contents.count) Item(s): \(String(describing: contents))"
+        return "WeakSet<\(String(describing: contents))>"
     }
 }
 
