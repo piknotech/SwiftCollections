@@ -38,17 +38,19 @@ class WeakDictionaryTests: XCTestCase {
         XCTAssertEqual(weakDictionary.contents.count, dictionary!.count)
     }
 
-    func testAddingAndRemoving() {
+    func testSubscript() {
         var weakDictionary = WeakDictionary(dictionary!)
 
-        // Test adding
+        // Test subscript setter
         let sampleKey = dictionary!.count
         let sampleValue = dictionary!.first!.value
         weakDictionary[sampleKey] = sampleValue
-        XCTAssertEqual(weakDictionary[sampleKey], sampleValue)
         XCTAssertEqual(weakDictionary.contents.values.count, dictionary!.count + 1)
 
-        // Test removing
+        // Test subscript getter
+        XCTAssertEqual(weakDictionary[sampleKey], sampleValue)
+
+        // Test subscript setter when setting to nil
         weakDictionary[sampleKey] = nil
         XCTAssertEqual(weakDictionary[sampleKey], nil)
         XCTAssertEqual(weakDictionary.contents.values.count, dictionary!.count)
