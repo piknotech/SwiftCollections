@@ -1,6 +1,6 @@
 # Contributing
 
-Controbutions are very much welcomed. In fact, this repository lives from creative proposals on how to make use of the ability to create custom collections.
+Contributions are very much welcomed. In fact, this repository lives from creative proposals on how to make use of the ability to create custom collections.
 
 ## Tutorial
 

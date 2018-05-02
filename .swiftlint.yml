@@ -56,6 +56,12 @@ custom_rules:
     name: "If as Guard"
     message: "Don't use an if statement to just return – use guard for such cases instead."
     severity: warning
+  inline_comment_space:
+    included: ".*.swift"
+    regex: '[^\s(\/\/)]+([ ]{2,}|)(?<!:)\/\/'
+    name: "Inline comment space"
+    message: "An inline comment should always have one single leading whitespace."
+    severity: warning
   late_force_unwrapping:
     included: ".*.swift"
     regex: '\(\S+\?\.\S+\)!'
