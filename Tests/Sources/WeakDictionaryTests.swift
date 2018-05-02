@@ -11,9 +11,9 @@ import Foundation
 @testable import SwiftCollections
 import XCTest
 
-class WeakDictionaryTests: XCTestCase {
+final class WeakDictionaryTests: XCTestCase {
     // MARK: - Subtypes
-    class SampleObject: Hashable {
+    final class SampleObject: Hashable {
         var hashValue: Int
 
         init(_ hashValue: Int) {

@@ -9,9 +9,9 @@
 @testable import SwiftCollections
 import XCTest
 
-class WeakArrayTests: XCTestCase {
+final class WeakArrayTests: XCTestCase {
     // MARK: - Subtypes
-    class SampleObject { }
+    final class SampleObject { }
 
     // MARK: - Properties
     private let arraySize = 3

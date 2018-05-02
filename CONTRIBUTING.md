@@ -33,6 +33,7 @@ Please obey these guidelines:
     - Write expressive tests covering any edited / newly created code.
     - Within the `Collections`, `Helpers` and `Tests/Sources` folders, sort things alphabetically.
 - For **file headers** in Swift source files, use the following format:
+
 ```swift
 //
 //  [File Title].swift

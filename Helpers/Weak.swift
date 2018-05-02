@@ -9,7 +9,7 @@
 import Foundation
 
 /// Weak wrapper for generic AnyObject.
-class Weak<T>: Hashable where T: AnyObject {
+final class Weak<T>: Hashable where T: AnyObject {
     // MARK: - Properties
     let hashValue: Int
     private(set) weak var value: T?

@@ -9,9 +9,9 @@
 @testable import SwiftCollections
 import XCTest
 
-class WeakSetTests: XCTestCase {
+final class WeakSetTests: XCTestCase {
     // MARK: - Subtypes
-    class SampleObject: Hashable {
+    final class SampleObject: Hashable {
         var hashValue: Int
 
         init(_ hashValue: Int) {

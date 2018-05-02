@@ -9,7 +9,7 @@
 @testable import SwiftCollections
 import XCTest
 
-class BagTests: XCTestCase {
+final class BagTests: XCTestCase {
     // MARK: - Properties
     private lazy var baseBag: Bag<Int> = {
         // Assuming array init works properly
