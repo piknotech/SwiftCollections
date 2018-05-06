@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WeakDictionary<Key: Hashable, Value: Hashable> where Value: AnyObject {
+struct WeakDictionary<Key: Hashable, Value> where Value: AnyObject {
     // MARK: - Properties
     var contents: [Key: Value] {
         return wrappedContents.filter { $0.value.value != nil }.mapValues { $0.value! }

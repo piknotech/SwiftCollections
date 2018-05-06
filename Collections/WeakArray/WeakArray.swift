@@ -6,6 +6,8 @@
 //  Copyright © 2018 Piknotech. All rights reserved.
 //
 
+import Foundation
+
 struct WeakArray<Element> where Element: AnyObject {
     // MARK: - Properties
     var contents: [Element] {
