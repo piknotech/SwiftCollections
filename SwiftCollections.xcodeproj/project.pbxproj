@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		CC20BAEC2056D8B6001773AA /* libSwiftCollections.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftCollections.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC20BAFE2056D9EF001773AA /* SwiftCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC20BAFE2056D9EF001773AA /* SwiftCollectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCollectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC28EA692059C742000E98AC /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		CC6DE94820405E71009C0BD2 /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		CC6DE94920405E71009C0BD2 /* WeakArrayDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakArrayDoc.md; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 				CCAA8C382056B6CF000F054D /* .swiftlint.yml */,
 				CC28EA692059C742000E98AC /* .travis.yml */,
 				CC20BAEC2056D8B6001773AA /* libSwiftCollections.a */,
-				CC20BAFE2056D9EF001773AA /* SwiftCollectionTests.xctest */,
+				CC20BAFE2056D9EF001773AA /* SwiftCollectionsTests.xctest */,
 			);
 			name = "Loose References";
 			sourceTree = "<group>";
@@ -206,9 +206,9 @@
 			productReference = CC20BAEC2056D8B6001773AA /* libSwiftCollections.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		CC20BAFD2056D9EF001773AA /* SwiftCollectionTests */ = {
+		CC20BAFD2056D9EF001773AA /* SwiftCollectionsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC20BB062056D9EF001773AA /* Build configuration list for PBXNativeTarget "SwiftCollectionTests" */;
+			buildConfigurationList = CC20BB062056D9EF001773AA /* Build configuration list for PBXNativeTarget "SwiftCollectionsTests" */;
 			buildPhases = (
 				CC20BAFA2056D9EF001773AA /* Sources */,
 				CC20BAFB2056D9EF001773AA /* Frameworks */,
@@ -220,9 +220,9 @@
 			dependencies = (
 				CC20BB052056D9EF001773AA /* PBXTargetDependency */,
 			);
-			name = SwiftCollectionTests;
+			name = SwiftCollectionsTests;
 			productName = SwiftCollectionTests;
-			productReference = CC20BAFE2056D9EF001773AA /* SwiftCollectionTests.xctest */;
+			productReference = CC20BAFE2056D9EF001773AA /* SwiftCollectionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +258,7 @@
 			projectRoot = "";
 			targets = (
 				CC20BAEB2056D8B6001773AA /* SwiftCollections */,
-				CC20BAFD2056D9EF001773AA /* SwiftCollectionTests */,
+				CC20BAFD2056D9EF001773AA /* SwiftCollectionsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -659,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC20BB062056D9EF001773AA /* Build configuration list for PBXNativeTarget "SwiftCollectionTests" */ = {
+		CC20BB062056D9EF001773AA /* Build configuration list for PBXNativeTarget "SwiftCollectionsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC20BB072056D9EF001773AA /* Debug */,

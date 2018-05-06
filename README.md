@@ -22,9 +22,9 @@
   • <a href="#license">License</a>
 </p>
 
-*SwiftCollections* is collection of handy, custom-written Swift collections, a category providing a great way to use all the power of Swift with protocols and generics.
+*SwiftCollections* is a collection of handy, custom-written Swift collection types.
 
-Not all of the collections in this repo are useful in every project, so this is rather a library of types being suitabvle for specific tasks. For the sake of being able to build & test it, the files are nonetheless wrapped together as a static cocoa touch library of no further use.
+Not all of the collections in this repo are useful in every project, so this is rather a library of types being suitable for specific tasks. For the sake of being able to build & test it, the files are nonetheless wrapped together as a static cocoa touch library of no further use.
 
 ## Documentation
 
