@@ -1,5 +1,5 @@
 //
-//  WeakArrayTests.swift
+//  WeakArrayWrapperTests.swift
 //  SwiftCollectionsTests
 //
 //  Created by Frederick Pietschmann on 12.03.18.
@@ -9,7 +9,7 @@
 @testable import SwiftCollections
 import XCTest
 
-final class WeakArrayTests: XCTestCase {
+final class WeakArrayWrapperTests: XCTestCase {
     // MARK: - Subtypes
     final class SampleObject { }
 
@@ -21,27 +21,27 @@ final class WeakArrayTests: XCTestCase {
 
     // MARK: - Methods
     func testCount() {
-        let weakArray = WeakArray(array!)
-        XCTAssertEqual(weakArray.contents.count, array!.count)
+        let weakArrayWrapper = WeakArrayWrapper(array!)
+        XCTAssertEqual(weakArrayWrapper.contents.count, array!.count)
     }
 
     func testAddingAndRemoving() {
-        var weakArray = WeakArray(array!)
+        var weakArrayWrapper = WeakArrayWrapper(array!)
 
         // Test adding
         let sample = array!.first!
         let sampleCount = 3
-        for _ in 0..<sampleCount { weakArray.add(sample) }
-        XCTAssertEqual(weakArray.contents.filter { $0 === sample }.count, sampleCount + 1)
+        for _ in 0..<sampleCount { weakArrayWrapper.add(sample) }
+        XCTAssertEqual(weakArrayWrapper.contents.filter { $0 === sample }.count, sampleCount + 1)
 
         // Test removing
-        weakArray.removeIdentical(to: sample)
-        XCTAssertEqual(weakArray.contents.count, arraySize - 1)
+        weakArrayWrapper.removeIdentical(to: sample)
+        XCTAssertEqual(weakArrayWrapper.contents.count, arraySize - 1)
     }
 
     func testCleaning() {
-        let weakArray = WeakArray(array!)
+        let weakArrayWrapper = WeakArrayWrapper(array!)
         array = nil
-        XCTAssertEqual(weakArray.contents.isEmpty, true)
+        XCTAssertEqual(weakArrayWrapper.contents.isEmpty, true)
     }
 }

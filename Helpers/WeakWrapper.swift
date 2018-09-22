@@ -1,5 +1,5 @@
 //
-//  Weak.swift
+//  WeakWrapper.swift
 //  SwiftCollections
 //
 //  Created by Frederick Pietschmann on 12.03.18.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// Weak wrapper for generic AnyObject.
-final class Weak<T>: Hashable where T: AnyObject {
+/// WeakWrapper wrapper for generic AnyObject.
+final class WeakWrapper<T>: Hashable where T: AnyObject {
     // MARK: - Properties
     let hashValue: Int
     private(set) weak var value: T?
@@ -21,7 +21,7 @@ final class Weak<T>: Hashable where T: AnyObject {
     }
 
     // MARK: - Methods
-    static func == (lhs: Weak, rhs: Weak) -> Bool {
+    static func == (lhs: WeakWrapper, rhs: WeakWrapper) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
 }

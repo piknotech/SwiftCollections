@@ -1,5 +1,5 @@
 //
-//  WeakSetTests.swift
+//  WeakSetWrapperTests.swift
 //  SwiftCollectionsTests
 //
 //  Created by Frederick Pietschmann on 12.03.18.
@@ -9,7 +9,7 @@
 @testable import SwiftCollections
 import XCTest
 
-final class WeakSetTests: XCTestCase {
+final class WeakSetWrapperTests: XCTestCase {
     // MARK: - Subtypes
     final class SampleObject: Hashable {
         var hashValue: Int
@@ -31,27 +31,27 @@ final class WeakSetTests: XCTestCase {
 
     // MARK: - Methods
     func testCount() {
-        let weakSet = WeakSet(set!)
-        XCTAssertEqual(weakSet.contents.count, set!.count)
+        let weakSetWrapper = WeakSetWrapper(set!)
+        XCTAssertEqual(weakSetWrapper.contents.count, set!.count)
     }
 
     func testInsertingAndRemoving() {
-        var weakSet = WeakSet(set!)
+        var weakSetWrapper = WeakSetWrapper(set!)
 
         // Test inserting
         let sample = set!.first!
         let sampleCount = 3
-        for _ in 0..<sampleCount { weakSet.insert(sample) }
-        XCTAssertEqual(weakSet.contents.filter { $0 === sample }.count, 1)
+        for _ in 0..<sampleCount { weakSetWrapper.insert(sample) }
+        XCTAssertEqual(weakSetWrapper.contents.filter { $0 === sample }.count, 1)
 
         // Test removing
-        weakSet.remove(sample)
-        XCTAssertEqual(weakSet.contents.count, setSize - 1)
+        weakSetWrapper.remove(sample)
+        XCTAssertEqual(weakSetWrapper.contents.count, setSize - 1)
     }
 
     func testCleaning() {
-        let weakSet = WeakSet(set!)
+        let weakSetWrapper = WeakSetWrapper(set!)
         set = nil
-        XCTAssertEqual(weakSet.contents.isEmpty, true)
+        XCTAssertEqual(weakSetWrapper.contents.isEmpty, true)
     }
 }

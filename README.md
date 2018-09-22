@@ -32,7 +32,7 @@ Not all of the collections in this repo are useful in every project, so this is 
 
 ## Documentation
 
-In this repo, a collection is not considered a type that has to conform to the `Collection` protocol, but anything that collects any type in any way. However, collecting must be the main purpose of the type, so a `UIViewController` subclass with two arrays collecting `String` e. g. wouldn't properly fit into this scheme. For an example, where a collection in the terminology of this repo doesn't conform to the `Collection` protocol, but has the main purpose of collecting something, see `WeakArray`.
+In this repo, a collection is not considered a type that has to conform to the `Collection` protocol, but anything that collects any type in any way. However, collecting must be the main purpose of the type, so a `UIViewController` subclass with two arrays collecting `String` e. g. wouldn't properly fit into this scheme. For an example, where a collection in the terminology of this repo doesn't conform to the `Collection` protocol, but has the main purpose of collecting something, see `WeakArrayWrapper`.
 
 This repo has a fixed file and folder structure:
 

@@ -1,5 +1,5 @@
 //
-//  WeakArray.swift
+//  WeakSetWrapper.swift
 //  SwiftCollections
 //
 //  Created by Frederick Pietschmann on 12.03.18.
@@ -8,32 +8,32 @@
 
 import Foundation
 
-struct WeakArray<Element> where Element: AnyObject {
+struct WeakSetWrapper<Element: AnyObject> where Element: Hashable {
     // MARK: - Properties
-    var contents: [Element] {
-        return wrappedContents.compactMap { $0.value }
+    var contents: Set<Element> {
+        return Set(wrappedContents.compactMap { $0.value })
     }
 
-    private var wrappedContents = [Weak<Element>]()
+    private var wrappedContents = Set<WeakWrapper<Element>>()
 
     // MARK: - Initializers
     init() { }
 
     init<S: Sequence>(_ sequence: S) where S.Iterator.Element == Element {
         for element in sequence {
-            add(element)
+            insert(element)
         }
     }
 
     // MARK: - Methods
-    mutating func add(_ item: Element) {
+    mutating func insert(_ item: Element) {
         clean()
-        wrappedContents.append(Weak<Element>(item))
+        wrappedContents.insert(WeakWrapper<Element>(item))
     }
 
-    mutating func removeIdentical(to item: Element) {
+    mutating func remove(_ item: Element) {
         clean()
-        wrappedContents = wrappedContents.filter { $0.value !== item }
+        wrappedContents.remove(WeakWrapper<Element>(item))
     }
 
     mutating func clean() {
@@ -42,14 +42,14 @@ struct WeakArray<Element> where Element: AnyObject {
 }
 
 // MARK: - CustomStringConvertible
-extension WeakArray: CustomStringConvertible {
+extension WeakSetWrapper: CustomStringConvertible {
     var description: String {
-        return "WeakArray<\(String(describing: contents))>"
+        return "WeakSetWrapper<\(String(describing: contents))>"
     }
 }
 
 // MARK: - ExpressibleByArrayLiteral
-extension WeakArray: ExpressibleByArrayLiteral {
+extension WeakSetWrapper: ExpressibleByArrayLiteral {
     init(arrayLiteral elements: Element...) {
         self.init(elements)
     }

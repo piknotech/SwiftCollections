@@ -1,5 +1,5 @@
 //
-//  WeakDictionaryTests.swift
+//  WeakDictionaryWrapperTests.swift
 //  SwiftCollections
 //
 //  Created by Frederick Pietschmann on 16.04.18.
@@ -11,7 +11,7 @@ import Foundation
 @testable import SwiftCollections
 import XCTest
 
-final class WeakDictionaryTests: XCTestCase {
+final class WeakDictionaryWrapperTests: XCTestCase {
     // MARK: - Subtypes
     final class SampleObject: Hashable {
         var hashValue: Int
@@ -34,31 +34,31 @@ final class WeakDictionaryTests: XCTestCase {
 
     // MARK: - Methods
     func testCount() {
-        let weakDictionary = WeakDictionary(dictionary!)
-        XCTAssertEqual(weakDictionary.contents.count, dictionary!.count)
+        let weakDictionaryWrapper = WeakDictionaryWrapper(dictionary!)
+        XCTAssertEqual(weakDictionaryWrapper.contents.count, dictionary!.count)
     }
 
     func testSubscript() {
-        var weakDictionary = WeakDictionary(dictionary!)
+        var weakDictionaryWrapper = WeakDictionaryWrapper(dictionary!)
 
         // Test subscript setter
         let sampleKey = dictionary!.count
         let sampleValue = dictionary!.first!.value
-        weakDictionary[sampleKey] = sampleValue
-        XCTAssertEqual(weakDictionary.contents.values.count, dictionary!.count + 1)
+        weakDictionaryWrapper[sampleKey] = sampleValue
+        XCTAssertEqual(weakDictionaryWrapper.contents.values.count, dictionary!.count + 1)
 
         // Test subscript getter
-        XCTAssertEqual(weakDictionary[sampleKey], sampleValue)
+        XCTAssertEqual(weakDictionaryWrapper[sampleKey], sampleValue)
 
         // Test subscript setter when setting to nil
-        weakDictionary[sampleKey] = nil
-        XCTAssertEqual(weakDictionary[sampleKey], nil)
-        XCTAssertEqual(weakDictionary.contents.values.count, dictionary!.count)
+        weakDictionaryWrapper[sampleKey] = nil
+        XCTAssertEqual(weakDictionaryWrapper[sampleKey], nil)
+        XCTAssertEqual(weakDictionaryWrapper.contents.values.count, dictionary!.count)
     }
 
     func testCleaning() {
-        let weakDictionary = WeakDictionary(dictionary!)
+        let weakDictionaryWrapper = WeakDictionaryWrapper(dictionary!)
         dictionary = nil
-        XCTAssertEqual(weakDictionary.contents.isEmpty, true)
+        XCTAssertEqual(weakDictionaryWrapper.contents.isEmpty, true)
     }
 }

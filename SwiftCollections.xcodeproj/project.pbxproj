@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CC20BAF62056D9B8001773AA /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE94E20405E71009C0BD2 /* Bag.swift */; };
-		CC20BAF72056D9B8001773AA /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE94820405E71009C0BD2 /* WeakArray.swift */; };
-		CC20BAF82056D9B8001773AA /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE94B20405E71009C0BD2 /* WeakSet.swift */; };
-		CC20BAF92056D9B8001773AA /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE95320405E71009C0BD2 /* Weak.swift */; };
+		CC20BAF72056D9B8001773AA /* WeakArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE94820405E71009C0BD2 /* WeakArrayWrapper.swift */; };
+		CC20BAF82056D9B8001773AA /* WeakSetWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE94B20405E71009C0BD2 /* WeakSetWrapper.swift */; };
+		CC20BAF92056D9B8001773AA /* WeakWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DE95320405E71009C0BD2 /* WeakWrapper.swift */; };
 		CC20BB032056D9EF001773AA /* libSwiftCollections.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC20BAEC2056D8B6001773AA /* libSwiftCollections.a */; };
 		CC20BB092056DA13001773AA /* BagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C482056C02C000F054D /* BagTests.swift */; };
-		CC20BB0A2056DA13001773AA /* WeakArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C402056BECF000F054D /* WeakArrayTests.swift */; };
-		CC20BB0B2056DA13001773AA /* WeakSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C462056C025000F054D /* WeakSetTests.swift */; };
-		CC850F3F2086820B00E4E890 /* WeakDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E720852C8600E2413A /* WeakDictionaryTests.swift */; };
-		CCC505E420852BFC00E2413A /* WeakDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E320852BFC00E2413A /* WeakDictionary.swift */; };
+		CC20BB0A2056DA13001773AA /* WeakArrayWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C402056BECF000F054D /* WeakArrayWrapperTests.swift */; };
+		CC20BB0B2056DA13001773AA /* WeakSetWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA8C462056C025000F054D /* WeakSetWrapperTests.swift */; };
+		CC850F3F2086820B00E4E890 /* WeakDictionaryWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E720852C8600E2413A /* WeakDictionaryWrapperTests.swift */; };
+		CCC505E420852BFC00E2413A /* WeakDictionaryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC505E320852BFC00E2413A /* WeakDictionaryWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,25 +45,25 @@
 		CC20BAEC2056D8B6001773AA /* libSwiftCollections.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftCollections.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC20BAFE2056D9EF001773AA /* SwiftCollectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCollectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC28EA692059C742000E98AC /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		CC6DE94820405E71009C0BD2 /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
-		CC6DE94920405E71009C0BD2 /* WeakArrayDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakArrayDoc.md; sourceTree = "<group>"; };
-		CC6DE94B20405E71009C0BD2 /* WeakSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSet.swift; sourceTree = "<group>"; };
-		CC6DE94C20405E71009C0BD2 /* WeakSetDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakSetDoc.md; sourceTree = "<group>"; };
+		CC6DE94820405E71009C0BD2 /* WeakArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArrayWrapper.swift; sourceTree = "<group>"; };
+		CC6DE94920405E71009C0BD2 /* WeakArrayWrapperDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakArrayWrapperDoc.md; sourceTree = "<group>"; };
+		CC6DE94B20405E71009C0BD2 /* WeakSetWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSetWrapper.swift; sourceTree = "<group>"; };
+		CC6DE94C20405E71009C0BD2 /* WeakSetWrapperDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakSetWrapperDoc.md; sourceTree = "<group>"; };
 		CC6DE94E20405E71009C0BD2 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		CC6DE94F20405E71009C0BD2 /* BagDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BagDoc.md; sourceTree = "<group>"; };
 		CC6DE95020405E71009C0BD2 /* DocTemplate.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DocTemplate.md; sourceTree = "<group>"; };
 		CC6DE95120405E71009C0BD2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CC6DE95320405E71009C0BD2 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		CC6DE95320405E71009C0BD2 /* WeakWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakWrapper.swift; sourceTree = "<group>"; };
 		CC6DE95420405E71009C0BD2 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		CCAA8C382056B6CF000F054D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		CCAA8C392056B814000F054D /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
-		CCAA8C402056BECF000F054D /* WeakArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArrayTests.swift; sourceTree = "<group>"; };
+		CCAA8C402056BECF000F054D /* WeakArrayWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArrayWrapperTests.swift; sourceTree = "<group>"; };
 		CCAA8C422056BECF000F054D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCAA8C462056C025000F054D /* WeakSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSetTests.swift; sourceTree = "<group>"; };
+		CCAA8C462056C025000F054D /* WeakSetWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSetWrapperTests.swift; sourceTree = "<group>"; };
 		CCAA8C482056C02C000F054D /* BagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTests.swift; sourceTree = "<group>"; };
-		CCC505E320852BFC00E2413A /* WeakDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakDictionary.swift; sourceTree = "<group>"; };
-		CCC505E520852C0900E2413A /* WeakDictionary.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakDictionary.md; sourceTree = "<group>"; };
-		CCC505E720852C8600E2413A /* WeakDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakDictionaryTests.swift; sourceTree = "<group>"; };
+		CCC505E320852BFC00E2413A /* WeakDictionaryWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakDictionaryWrapper.swift; sourceTree = "<group>"; };
+		CCC505E520852C0900E2413A /* WeakDictionaryWrapperDoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WeakDictionaryWrapperDoc.md; sourceTree = "<group>"; };
+		CCC505E720852C8600E2413A /* WeakDictionaryWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakDictionaryWrapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,29 +103,29 @@
 			isa = PBXGroup;
 			children = (
 				CC6DE94D20405E71009C0BD2 /* Bag */,
-				CC6DE94720405E71009C0BD2 /* WeakArray */,
-				CC6DE94A20405E71009C0BD2 /* WeakSet */,
-				CCC505E620852C0E00E2413A /* WeakDictionary */,
+				CC6DE94720405E71009C0BD2 /* WeakArrayWrapper */,
+				CC6DE94A20405E71009C0BD2 /* WeakSetWrapper */,
+				CCC505E620852C0E00E2413A /* WeakDictionaryWrapper */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
 		};
-		CC6DE94720405E71009C0BD2 /* WeakArray */ = {
+		CC6DE94720405E71009C0BD2 /* WeakArrayWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				CC6DE94820405E71009C0BD2 /* WeakArray.swift */,
-				CC6DE94920405E71009C0BD2 /* WeakArrayDoc.md */,
+				CC6DE94820405E71009C0BD2 /* WeakArrayWrapper.swift */,
+				CC6DE94920405E71009C0BD2 /* WeakArrayWrapperDoc.md */,
 			);
-			path = WeakArray;
+			path = WeakArrayWrapper;
 			sourceTree = "<group>";
 		};
-		CC6DE94A20405E71009C0BD2 /* WeakSet */ = {
+		CC6DE94A20405E71009C0BD2 /* WeakSetWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				CC6DE94B20405E71009C0BD2 /* WeakSet.swift */,
-				CC6DE94C20405E71009C0BD2 /* WeakSetDoc.md */,
+				CC6DE94B20405E71009C0BD2 /* WeakSetWrapper.swift */,
+				CC6DE94C20405E71009C0BD2 /* WeakSetWrapperDoc.md */,
 			);
-			path = WeakSet;
+			path = WeakSetWrapper;
 			sourceTree = "<group>";
 		};
 		CC6DE94D20405E71009C0BD2 /* Bag */ = {
@@ -140,7 +140,7 @@
 		CC6DE95220405E71009C0BD2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CC6DE95320405E71009C0BD2 /* Weak.swift */,
+				CC6DE95320405E71009C0BD2 /* WeakWrapper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -169,20 +169,20 @@
 			isa = PBXGroup;
 			children = (
 				CCAA8C482056C02C000F054D /* BagTests.swift */,
-				CCAA8C402056BECF000F054D /* WeakArrayTests.swift */,
-				CCAA8C462056C025000F054D /* WeakSetTests.swift */,
-				CCC505E720852C8600E2413A /* WeakDictionaryTests.swift */,
+				CCAA8C402056BECF000F054D /* WeakArrayWrapperTests.swift */,
+				CCAA8C462056C025000F054D /* WeakSetWrapperTests.swift */,
+				CCC505E720852C8600E2413A /* WeakDictionaryWrapperTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		CCC505E620852C0E00E2413A /* WeakDictionary */ = {
+		CCC505E620852C0E00E2413A /* WeakDictionaryWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				CCC505E320852BFC00E2413A /* WeakDictionary.swift */,
-				CCC505E520852C0900E2413A /* WeakDictionary.md */,
+				CCC505E320852BFC00E2413A /* WeakDictionaryWrapper.swift */,
+				CCC505E520852C0900E2413A /* WeakDictionaryWrapperDoc.md */,
 			);
-			path = WeakDictionary;
+			path = WeakDictionaryWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,11 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC20BAF82056D9B8001773AA /* WeakSet.swift in Sources */,
-				CCC505E420852BFC00E2413A /* WeakDictionary.swift in Sources */,
-				CC20BAF92056D9B8001773AA /* Weak.swift in Sources */,
+				CC20BAF82056D9B8001773AA /* WeakSetWrapper.swift in Sources */,
+				CCC505E420852BFC00E2413A /* WeakDictionaryWrapper.swift in Sources */,
+				CC20BAF92056D9B8001773AA /* WeakWrapper.swift in Sources */,
 				CC20BAF62056D9B8001773AA /* Bag.swift in Sources */,
-				CC20BAF72056D9B8001773AA /* WeakArray.swift in Sources */,
+				CC20BAF72056D9B8001773AA /* WeakArrayWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC20BB092056DA13001773AA /* BagTests.swift in Sources */,
-				CC850F3F2086820B00E4E890 /* WeakDictionaryTests.swift in Sources */,
-				CC20BB0A2056DA13001773AA /* WeakArrayTests.swift in Sources */,
-				CC20BB0B2056DA13001773AA /* WeakSetTests.swift in Sources */,
+				CC850F3F2086820B00E4E890 /* WeakDictionaryWrapperTests.swift in Sources */,
+				CC20BB0A2056DA13001773AA /* WeakArrayWrapperTests.swift in Sources */,
+				CC20BB0B2056DA13001773AA /* WeakSetWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
